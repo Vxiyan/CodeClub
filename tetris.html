@@ -39,6 +39,13 @@
             top: 0;
             z-index: 1000;
         }
+        .iframe {
+            position: absolute; /* Position relative to the container */
+            top: 0;
+            left: 0;
+            width: 100%; /* Fill the container's width */
+            height: 100%; /* Fill the container's height */
+        }
     </style>
 </head>
 <body>
@@ -67,7 +74,7 @@
                     <div class="card text-white bg-secondary mb-3">
                         <div class="card-body">
                             <h5 class="card-title">Tetris</h5>
-                                <iframe src="javascripttetris.html" title="A game of tetris."></iframe>
+                                <iframe class="iframe" src="javascripttetris.html" title="A game of tetris."></iframe>
                         </div>
                     </div>
                 </div>

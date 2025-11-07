@@ -5,57 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gisa Coding Club</title>
    <!-- Favicon -->
-   <link rel="icon" type="image/png" href="Logo.png"> <!-- or .ico -->
+   <link rel="icon" type="image/png" href="images/GISA coding club logo.png"> <!-- or .ico -->
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-        }
-        .sidebar {
-            height: 100vh;
-            position: fixed;
-            width: 250px;
-            background-color: #343a40;
-        }
-        .sidebar .nav-link {
-            color: #fff;
-            padding: 15px;
-            text-decoration: none;
-        }
-        .sidebar .nav-link:hover {
-            background-color: #495057;
-        }
-        .main-content {
-            margin-left: 250px;
-            padding: 20px;
-        }
-        .top-navbar {
-            background-color: #343a40;
-            color: white;
-            padding: 15px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/GCC.css">
 </head>
 <body>
+    <button class="btn btn-outline-light p-2 m-2"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#sidebarNav"
+          aria-controls="sidebarNav"
+          aria-expanded="true"
+          id="sidebarToggle">
+    ☰ Menu
+    </button>
     <!-- Sidebar -->
-    <div class="sidebar">
-        <nav class="nav flex-column">
+    <div class="sidebar collapse show" id="sidebarNav">
+        <nav class="nav flex-column pt-4">
             <a class="nav-link active" href="badges.html">Badges</a>
             <a class="nav-link" href="reports.html">Reports</a>
-            <a class="nav-link" href="rankings.html">Rankings</a>
         </nav>
     </div>
 
     <!-- Main Content -->
-    <div class="main-content">
+    <div class="main-content" id="mainContent">
         <!-- Top Navbar -->
-        <div class="top-navbar" class="card text-white">
-            <h4>Home</h4>
+        <div class="top-navbar card text-white bg-dark mb-3">
+            <h4 class="m-0 p-2">Home</h4>
         </div>
 
         <!-- Dashboard Widgets -->
@@ -66,27 +43,67 @@
                     <div class="card text-white bg-primary mb-3">
                         <div class="card-body">
                             <h5 class="card-title">Home Page</h5>
-                            <p class="card-text">Welcome to the Gisa Coding Club website!</p>
-                            <p class="card-text">This is where you get updates on the club, your ranking and your badges!</p>
-                            <p class="card-text">We are happy to have you here! :)</p>
-                            <p class="card-text">We meet on tuesdays and thursdays in room 116, please see the schedule for specific dates.</p>
+                            <p class="card-text">Welcome to the Gisa Coding Club website! This is where you get updates on the club, and your badges! We are happy to have you here! We meet on tuesdays and thursdays in room 116, please see the schedule for specific dates.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                    <div class="card text-white bg-secondary mb-3" style="background-color:#48cd40;">
+                        <div class="card-body">
+                            <h5 class="card-title">Links/Downloads</h5>
+                            <p class="card-text">
+                                <span class="label">RULES</span>
+                                <a href="https://docs.google.com/document/d/1TVfSkiNtCIYIYLpgMEY97NxoRyV55J4CywYUk9Ydx74/edit?usp=sharing">
+                                    <img src="images/Google_Docs_2020_Logo.svg.png" alt="rules" style="max-width:33%; height:auto;">
+                                </a>
+                            </p>
+                            <p class="card-text">
+                                <span class="label">Club Sign Up Form</span>
+                                <a href="https://forms.gle/bx7bZCbK8E8kLzER6">
+                                    <img src="images/Google_Forms_2020_Logo.svg.png" alt="club sign up form" style="max-width:33%; height:auto;">
+                                </a>
+                            </p>
+                            <p class="card-text">
+                                <span class="label">Download Club Schedule</span>
+                                <a href="images/Club-Schedule.pdf" download>
+                                    <img src="images/PDF_file_icon.svg.png" alt="download club schedule" style="max-width:33%; height:auto;">
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
                 <!-- Card 3 -->
                 <div class="col-md-4">
-                    <div class="card text-white bg-secondary mb-3" style="background-color:#48cd40;">
+                    <div class="card text-white bg-success mb-3" style="background-color:#f39c12;">
                         <div class="card-body">
-                            <h5 class="card-title">Links/Downloads</h5>
-                            <p class="card-text"></p>
-                            <p><a class="card-text" href="https://docs.google.com/document/d/1TVfSkiNtCIYIYLpgMEY97NxoRyV55J4CywYUk9Ydx74/edit?usp=sharing" style="color:#D4D4D4;">RULES</a></p>
-                            <p><a class="card-text" href="https://forms.gle/bx7bZCbK8E8kLzER6" style="color:#D4D4D4;">Club Sign Up Form</a></p>
-                            <p><a class="card-text" href="Club-Schedule.pdf" style="color:#D4D4D4;" download>Download Club Schedule</a></p>
+                            <h5 class="card-title">Contact Us</h5>
+                            <p class="card-text">For any inquiries, please contact us at 
+                                <b>joaquinn.arimany@gisaoh.org</b> or
+                                <b>daniel.murchie@gisaoh.org</b>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const sidebar = document.getElementById('sidebarNav');
+        const main   = document.getElementById('mainContent');
+
+        // Listen for the collapse events
+        sidebar.addEventListener('shown.bs.collapse', () => {
+            sidebar.classList.remove('collapsed');
+            main.classList.remove('expanded');
+        });
+        sidebar.addEventListener('hidden.bs.collapse', () => {
+            sidebar.classList.add('collapsed');
+            main.classList.add('expanded');
+        });
+    </script>
 </body>
 </html>
